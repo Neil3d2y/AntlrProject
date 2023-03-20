@@ -48,6 +48,29 @@
     -Xexact-output-dir  all output goes into -o dir regardless of paths/package
    ```
 
+5. Add `Antlr` Plugin to IntelliJ
+   1. Identify `.g4` files and can preview parse Tree for given input
+6. Add `Antlr` dependencies for the Java Project
+
+   https://docs.gradle.org/current/userguide/antlr_plugin.html
+
+   ```groovy
+   plugins {
+       id 'antlr'
+   }
+   
+   dependencies {
+      antlr 'org.antlr:antlr4:4.12.0' // use antlr version 4.
+   }
+   
+   generateGrammarSource {
+      maxHeapSize = "64m"
+      arguments += ["-visitor"] // Add visitor classes
+      outputDirectory = file('src/main/java/com/neil3d2y/antlr/generated')
+   }
+   ```
+
+
 
 ## Workflow of Using Antlr
 
