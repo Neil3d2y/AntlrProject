@@ -7,5 +7,9 @@ import java.util.List;
  * Contains list of Expression
  */
 public class Program {
-    List<Expression> expressions = new ArrayList<>();
+    public List<Expression> expressions = new ArrayList<>();
+
+    public Program(List<Expression> expressions) {
+        this.expressions = expressions;
+    }
 }

@@ -20,3 +20,14 @@ generateGrammarSource {
     arguments += ["-visitor"]
     outputDirectory = file('src/main/java/com/neil3d2y/antlr/generated')
 }
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Jar File Example',
+                'Implementation-Version': version,
+                'Created-By' : "neil3d2y",
+                'Main-Class': 'com.neil3d2y.antlr.Main'
+    }
+    baseName = "$project.name-all"
+    from {project.configurations.runtimeClasspath.collect {File file -> project.zipTree(file) } }
+}
