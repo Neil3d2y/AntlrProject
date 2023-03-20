@@ -1,5 +1,19 @@
 # Antlr 4
 
+## Usage
+
+```shell
+❯ java -jar build/libs/AntlrProject-all-1.0-SNAPSHOT.jar  testCases/test3.txt
+Main Class of Antlr.libs/AntlrProject-all-1.0-SNAPSHOT.jar  testCases/test3.txt
+i is 5
+j is 7
+i + j is 12
+i + j * 3 is 26
+i + j + 3 is 15
+10 is 10
+
+```
+
 ## Install Antlr
 
 1. Download Antlr-4.12.0 jar file from [antlr.org](https://www.antlr.org/download.html)
